@@ -666,7 +666,7 @@ fn apply_container_motion(
     use std::time::Duration;
 
     if !motion.enabled {
-        return element.into_any_element();
+        return apply_accessibility_semantics(element, accessibility).into_any_element();
     }
 
     let id = format!("gpui-motion-{}-{}", motion.stable_id, motion.request);
